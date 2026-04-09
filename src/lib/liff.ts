@@ -16,12 +16,15 @@ export const initLiff = async () => {
 };
 
 export const sendBookingMessage = async () => {
-  if (!liff.isInClient()) {
-    alert('Booking Confirmed!');
-    return;
-  }
-
   try {
+    // เพิ่มบรรทัดนี้ เพื่อเช็คชัวร์ๆ ว่า LIFF โหลดเสร็จ 100% ก่อนส่งข้อความ
+    await liff.ready;
+
+    if (!liff.isInClient()) {
+      alert('Booking Confirmed! (เปิดบนเบราว์เซอร์ปกติ)');
+      return;
+    }
+
     await liff.sendMessages([
       {
         type: 'text',
@@ -29,9 +32,10 @@ export const sendBookingMessage = async () => {
       },
     ]);
     liff.closeWindow();
-  } catch (error) {
+  } catch (error: any) {
     console.error('Failed to send message:', error);
-    alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
+    // เปลี่ยน Alert ให้บอกสาเหตุที่แท้จริง
+    alert('เกิดข้อผิดพลาด: ' + (error.message || JSON.stringify(error)));
   }
 };
 
