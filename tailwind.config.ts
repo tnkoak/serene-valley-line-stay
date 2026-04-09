@@ -12,8 +12,29 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      heading: ['Playfair Display', 'serif'],
+      body: ['Inter', 'sans-serif'],
+    },
     extend: {
       colors: {
+        nature: {
+          50: "hsl(152 45% 95%)",
+          100: "hsl(152 40% 90%)",
+          200: "hsl(152 40% 80%)",
+          300: "hsl(152 40% 65%)",
+          400: "hsl(152 45% 45%)",
+          500: "hsl(152 45% 35%)",
+          600: "hsl(152 50% 25%)",
+          700: "hsl(152 50% 18%)",
+        },
+        earth: {
+          50: "hsl(35 30% 96%)",
+          100: "hsl(35 30% 88%)",
+          200: "hsl(30 35% 78%)",
+          300: "hsl(30 50% 70%)",
+          400: "hsl(25 40% 55%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
