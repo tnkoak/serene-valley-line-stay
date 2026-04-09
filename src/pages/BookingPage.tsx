@@ -54,6 +54,7 @@ const BookingPage = () => {
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
+                type="button"
                 className={cn('w-full justify-start text-left font-normal', !checkIn && 'text-muted-foreground')}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
