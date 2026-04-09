@@ -1,6 +1,6 @@
 import liff from '@line/liff';
 
-const LIFF_ID = '2009753618-cwZ9hnYy';
+const LIFF_ID = '2009753618-hMP4ipGc';
 
 let isInitialized = false;
 
