@@ -9,7 +9,7 @@ const ContactPage = () => {
       <div className="mt-5 space-y-4">
         <div className="rounded-xl border border-border bg-card p-4 shadow-sm space-y-4">
           {[
-            { icon: MapPin, label: 'ที่อยู่', value: '123 หมู่ 5 ต.หุบเขา อ.เมือง จ.เชียงใหม่ 50000' },
+            { icon: MapPin, label: 'ที่อยู่', value: '123 กมลา อำเภอกะทู้ ภูเก็ต' },
             { icon: Phone, label: 'โทรศัพท์', value: '053-123-456' },
             { icon: Mail, label: 'อีเมล', value: 'info@serenevalley.com' },
             { icon: Clock, label: 'เวลาทำการ', value: 'เปิดให้บริการ 24 ชั่วโมง' },
@@ -30,10 +30,11 @@ const ContactPage = () => {
         <div className="overflow-hidden rounded-xl border border-border">
           <iframe
             title="Serene Valley Resort Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.123!2d98.9812!3d18.7883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDQ3JzE4LjAiTiA5OMKwNTgnNTIuMyJF!5e0!3m2!1sth!2sth!4v1"
-            className="h-48 w-full"
+            src="https://www.google.com/maps?q=7.9638611,98.2820278&z=18&output=embed"
+            className="h-[300px] w-full"
             loading="lazy"
             allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
       </div>
